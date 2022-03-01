@@ -125,7 +125,7 @@ class DictionaryRegistry implements \Iterator, \Countable
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->registry);
     }
@@ -137,6 +137,7 @@ class DictionaryRegistry implements \Iterator, \Countable
      *
      * @return \Org\Heigl\Hyphenator\Dictionary\Dictionary
      */
+    #[\ReturnTypeWillChange]
     public function current()
     {
         return current($this->registry);
@@ -149,6 +150,7 @@ class DictionaryRegistry implements \Iterator, \Countable
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function key()
     {
         return key($this->registry);
@@ -161,7 +163,7 @@ class DictionaryRegistry implements \Iterator, \Countable
      *
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         return count($this->registry);
     }
@@ -173,7 +175,7 @@ class DictionaryRegistry implements \Iterator, \Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
         next($this->registry);
     }
@@ -185,7 +187,7 @@ class DictionaryRegistry implements \Iterator, \Countable
      *
      * @return boolean
      */
-    public function valid()
+    public function valid(): bool
     {
         if (false === current($this->registry)) {
             return false;
