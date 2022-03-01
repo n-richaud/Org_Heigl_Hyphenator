@@ -145,6 +145,7 @@ class FilterRegistry implements Iterator, Countable
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function rewind()
     {
         reset($this->registry);
@@ -157,6 +158,7 @@ class FilterRegistry implements Iterator, Countable
      *
      * @return Filter
      */
+    #[\ReturnTypeWillChange]
     public function current()
     {
         return current($this->registry);
@@ -169,6 +171,7 @@ class FilterRegistry implements Iterator, Countable
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function key()
     {
         return key($this->registry);
@@ -181,6 +184,7 @@ class FilterRegistry implements Iterator, Countable
      *
      * @return int
      */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return count($this->registry);
@@ -193,6 +197,7 @@ class FilterRegistry implements Iterator, Countable
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function next()
     {
         next($this->registry);
@@ -205,6 +210,7 @@ class FilterRegistry implements Iterator, Countable
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function valid()
     {
         if (false === current($this->registry)) {
